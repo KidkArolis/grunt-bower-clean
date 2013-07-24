@@ -31,7 +31,7 @@ In your `bower.json` file configure `dependenciesIgnore` like so:
   },
   "dependenciesIgnore": {
     "backbone": ["**/!(backbone.js)"],
-    "when": ["docs", "test", "*.!(js)"]
+    "when": ["docs", "test", "*.!(js)", ".*"]
   }
 }
 ```
@@ -48,4 +48,10 @@ running
 grunt bower_clean
 ```
 
-will remove all files from `bower_components/backbone` except for `backbone.js` and `.bower.json` and from `bower_components/when`, `docs` and `test` directories will be removed as well as all non JS files (excep for `.bower.json`). This works exactly like bower's own ignore option (see https://github.com/bower/bower#defining-a-package for more info).
+will remove all files from `bower_components/backbone` except for `backbone.js` and `.bower.json` and from `bower_components/when`, `docs` and `test` directories will be removed as well as all non JS and dot files (except for `.bower.json`). This works exactly like bower's own ignore option (see https://github.com/bower/bower#defining-a-package for more info).
+
+Use `--dry-run` option to see the list of files that will be removed.
+
+```js
+grun bower_clean --dry-run
+```
