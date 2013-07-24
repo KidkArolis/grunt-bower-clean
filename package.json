@@ -1,0 +1,46 @@
+{
+  "name": "grunt-bower-clean",
+  "description": "Remove files (e.g. docs, tests, etc.) from installed bower components",
+  "version": "0.1.0",
+  "homepage": "https://github.com/KidkArolis/grunt-bower-clean",
+  "author": {
+    "name": "Karolis Narkevicius",
+    "email": "karolis.n@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/KidkArolis/grunt-bower-clean/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt": "~0.4.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "bower": "~1.0.0",
+    "lodash": "~1.3.1",
+    "q": "~0.9.6",
+    "rimraf": "~2.2.2",
+    "fstream-ignore": "0.0.7"
+  }
+}
