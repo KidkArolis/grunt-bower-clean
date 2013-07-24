@@ -16,6 +16,19 @@ var basePath = process.cwd();
 // var removeIgnores = require('bower/lib/util/removeIgnores');
 var removeIgnores = require('../lib/removeIgnores');
 
+function extractComponentDirs(list) {
+  var dirs = {};
+  function d(l) {
+    _.each(l.dependencies, function (info, component) {
+      if (info.canonicalDir) {
+        dirs[component] = info.canonicalDir;
+      }
+      d(info);
+    });
+  }
+  d(list);
+  return dirs;
+}
 
 module.exports = function(grunt) {
 
@@ -33,13 +46,14 @@ module.exports = function(grunt) {
 
 
     bower.commands
-      .list({paths: true})
+      .list({}, {offline: true})
       .on('error', function (err) {
         grunt.log.error(err.message);
       })
-      .on('end', function (data) {
+      .on('end', function (list) {
+        var dirs = extractComponentDirs(list);
         var removals = [];
-        _.each(data, function(dir, component) {
+        _.each(dirs, function(dir, component) {
           // check if we have ignore configuration for this component
           var ignore = cfg[component];
           if (ignore) {
