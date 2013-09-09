@@ -54,3 +54,9 @@ Use `--dry-run` option to see the list of files that will be removed.
 ```js
 grun bower_clean --dry-run
 ```
+
+## Changelog
+
+### 0.2.0
+
+* don't remove .jshintrc files - they're usually useful

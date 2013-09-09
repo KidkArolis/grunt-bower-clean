@@ -1,7 +1,7 @@
 {
   "name": "grunt-bower-clean",
   "description": "Remove files (e.g. docs, tests, etc.) from installed bower components",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/KidkArolis/grunt-bower-clean",
   "author": {
     "name": "Karolis Narkevicius",
