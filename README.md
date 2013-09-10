@@ -57,6 +57,10 @@ grun bower_clean --dry-run
 
 ## Changelog
 
+### 0.2.1
+
+* fix whitelisting
+
 ### 0.2.0
 
 * don't remove .jshintrc files - they're usually useful
