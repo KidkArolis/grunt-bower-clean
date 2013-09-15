@@ -52,7 +52,7 @@ will remove all files from `bower_components/backbone` except for `backbone.js` 
 Use `--dry-run` option to see the list of files that will be removed.
 
 ```js
-grun bower_clean --dry-run
+grunt bower_clean --dry-run
 ```
 
 ## Changelog
