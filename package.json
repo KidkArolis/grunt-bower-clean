@@ -9,8 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:KidkArolis/grunt-bower-clean.git"
   },
+  "bugs": "https://github.com/KidkArolis/grunt-bower-clean/issues",
   "licenses": [
     {
       "type": "MIT",
